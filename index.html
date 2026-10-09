@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pyae Phyo Han – Computer Engineer</title>
+  <meta name="description" content="Computer engineer in Bangkok building full-stack web apps, IoT systems and AI tools. Projects, live demos and contact.">
+  <meta property="og:title" content="Pyae Phyo Han – Computer Engineer">
+  <meta property="og:description" content="Full-stack web apps, IoT systems and AI tools. Projects, live demos and contact.">
+  <meta property="og:url" content="https://grantthep.github.io/">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#fafaf9">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fafaf9; --card: #ffffff; --text: #1c1917; --muted: #57534e; --faint: #a8a29e;
+      --line: #e7e5e4; --accent: #065f46; --tag: #f5f5f4;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #161514; --card: #1f1e1c; --text: #f5f5f4; --muted: #a8a29e; --faint: #78716c;
+        --line: #2e2c2a; --accent: #6ee7b7; --tag: #2a2826;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0; background: var(--bg); color: var(--text);
+      font: 16px/1.6 "IBM Plex Sans", system-ui, sans-serif;
+    }
+    a { color: var(--accent); text-underline-offset: 3px; }
+    main { max-width: 720px; margin: 0 auto; padding: 48px 20px 64px; }
+
+    header h1 { font-size: 2rem; line-height: 1.2; margin: 0; letter-spacing: -0.01em; }
+    header .role { margin: 6px 0 0; color: var(--muted); font-size: 1.05rem; }
+    header .intro { margin: 20px 0 0; max-width: 60ch; }
+    .contact { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; padding: 0; list-style: none; }
+    .contact a {
+      display: inline-block; padding: 8px 14px; border: 1px solid var(--line); border-radius: 8px;
+      background: var(--card); color: var(--text); text-decoration: none; font-size: 0.95rem;
+    }
+    .contact a:hover { border-color: var(--faint); }
+    .contact .primary { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+
+    section { margin-top: 48px; }
+    h2 {
+      font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--muted); margin: 0 0 16px;
+    }
+
+    .project { padding: 20px; border: 1px solid var(--line); border-radius: 12px; background: var(--card); }
+    .project + .project { margin-top: 12px; }
+    .project h3 { margin: 0; font-size: 1.1rem; }
+    .project .meta { margin: 2px 0 0; color: var(--muted); font-size: 0.9rem; }
+    .project p { margin: 10px 0 0; }
+    .project ul.points { margin: 10px 0 0; padding-left: 20px; }
+    .project ul.points li + li { margin-top: 4px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 14px 0 0; padding: 0; list-style: none; }
+    .tags li {
+      font: 0.78rem/1.4 "IBM Plex Mono", ui-monospace, monospace; padding: 3px 8px;
+      background: var(--tag); border-radius: 6px; color: var(--muted);
+    }
+    .links { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 14px; font-weight: 500; font-size: 0.95rem; }
+    .featured { border-color: var(--accent); }
+    .label {
+      display: inline-block; font-size: 0.75rem; font-weight: 600; color: var(--accent);
+      margin-bottom: 6px; letter-spacing: 0.04em; text-transform: uppercase;
+    }
+
+    .compact { list-style: none; margin: 0; padding: 0; border: 1px solid var(--line); border-radius: 12px; background: var(--card); }
+    .compact li { padding: 14px 20px; }
+    .compact li + li { border-top: 1px solid var(--line); }
+    .compact .row { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
+    .compact strong { font-weight: 600; }
+    .compact span { color: var(--muted); font-size: 0.9rem; }
+    .compact p { margin: 4px 0 0; color: var(--muted); font-size: 0.95rem; }
+
+    .skills { display: grid; gap: 10px; margin: 0; }
+    .skills div { display: grid; grid-template-columns: 9.5rem 1fr; gap: 12px; }
+    .skills dt { color: var(--muted); }
+    .skills dd { margin: 0; }
+    @media (max-width: 520px) {
+      main { padding-top: 32px; }
+      header h1 { font-size: 1.7rem; }
+      .skills div { grid-template-columns: 1fr; gap: 0; }
+    }
+
+    footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--faint); font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Pyae Phyo Han</h1>
+    <p class="role">Computer Engineer · Full-stack &amp; IoT · Bangkok</p>
+    <p class="intro">
+      I studied Computer Engineering at Assumption University (2025) and I like building things that
+      work end to end: the database, the API, the screen people tap on, and sometimes the hardware
+      underneath. Below are projects you can try live or read the code for.
+    </p>
+    <ul class="contact">
+      <li><a class="primary" href="mailto:pyaephyohan658@gmail.com">Email me</a></li>
+      <li><a href="https://www.linkedin.com/in/pyaephyohan12">LinkedIn</a></li>
+      <li><a href="https://github.com/Grantthep">GitHub</a></li>
+    </ul>
+  </header>
+
+  <section aria-labelledby="web">
+    <h2 id="web">Web &amp; AI projects</h2>
+
+    <article class="project featured">
+      <span class="label">Live</span>
+      <h3>NatBook – booking marketplace for Bangkok</h3>
+      <p class="meta">2026 · Full-stack web app</p>
+      <p>
+        Shops sign up, add services and opening hours, and get their own booking page. Customers find
+        a shop, pick a free time and book without an account. The owner sees new bookings on their
+        dashboard straight away.
+      </p>
+      <ul class="points">
+        <li>Double bookings are impossible: a PostgreSQL exclusion constraint rejects overlapping times, even when two people book at once.</li>
+        <li>Time slots are calculated per shop timezone, with tests for daylight-saving changes.</li>
+        <li>Customers can view or cancel through a private link; owners only ever see their own shop's data.</li>
+        <li>16 automated tests run on every push. Deployed on Vercel, Render and Neon.</li>
+      </ul>
+      <ul class="tags"><li>FastAPI</li><li>PostgreSQL</li><li>SQLAlchemy</li><li>React</li><li>TypeScript</li><li>Tailwind</li><li>GitHub Actions</li></ul>
+      <div class="links">
+        <a href="https://natbook.vercel.app">Open the app</a>
+        <a href="https://github.com/Grantthep/natbook">Code</a>
+      </div>
+    </article>
+
+    <article class="project">
+      <span class="label">Live</span>
+      <h3>Self-learning customer support assistant</h3>
+      <p class="meta">2026 · Issa Compass hackathon</p>
+      <p>
+        An API that replies to visa customers in the casual style of real consultants, trained on
+        sample chat history. An editor model compares each AI reply with what the consultant actually
+        wrote and rewrites the prompt, so the assistant improves with every conversation.
+      </p>
+      <ul class="points">
+        <li>Guard rails reject prompt edits that would delete most of the prompt or break its output format.</li>
+        <li>Every prompt change is versioned, with a diff view of what the model learned.</li>
+      </ul>
+      <ul class="tags"><li>Python</li><li>Flask</li><li>LLM APIs</li><li>Prompt engineering</li><li>Docker</li></ul>
+      <div class="links">
+        <a href="https://issa-dtv-assistant.onrender.com">Try it</a>
+        <a href="https://github.com/Grantthep/hackathon-submission">Code</a>
+      </div>
+    </article>
+
+    <article class="project">
+      <h3>Mahjong Dynasty</h3>
+      <p class="meta">2026 · Browser game</p>
+      <p>
+        A mahjong-themed cascading tile game with demo credits only. The server decides every outcome
+        and stores it; the browser just animates the result, so nothing can be changed client-side.
+      </p>
+      <ul class="tags"><li>TypeScript</li><li>React</li><li>Phaser 3</li><li>Express</li><li>Prisma</li><li>PostgreSQL</li></ul>
+      <div class="links"><a href="https://github.com/Grantthep/mahjong-dynasty">Code</a></div>
+    </article>
+  </section>
+
+  <section aria-labelledby="iot">
+    <h2 id="iot">IoT, hardware &amp; other work</h2>
+    <ul class="compact">
+      <li>
+        <div class="row"><strong><a href="https://github.com/Grantthep/asrs-3x3-controller">ASRS automated warehouse</a></strong><span>2024</span></div>
+        <p>Storage and retrieval system controlled from a Flutter app or a gesture glove (MPU6050 + flex sensors), with an ESP32 controller and MySQL inventory.</p>
+      </li>
+      <li>
+        <div class="row"><strong>LoRa indoor/outdoor localization</strong><span>2025</span></div>
+        <p>Node-to-gateway LoRa setup that estimates location from RSSI, with signal-strength maps built in Python.</p>
+      </li>
+      <li>
+        <div class="row"><strong><a href="https://github.com/Grantthep/gps_tram">Tram GPS tracking</a></strong><span>2026</span></div>
+        <p>App that shows where the tram is right now.</p>
+      </li>
+      <li>
+        <div class="row"><strong><a href="https://github.com/Grantthep/movie-genre-classification">Movie genre classification</a></strong><span>2024</span></div>
+        <p>Predicts a film's genre from its plot using TF-IDF features; compares Naive Bayes, Logistic Regression and SVM.</p>
+      </li>
+      <li>
+        <div class="row"><strong><a href="https://github.com/Grantthep/what2gift">What2Gift</a></strong><span>2023</span></div>
+        <p>Gift suggestion website that filters ideas by age, interests, occasion and budget.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="skills">
+    <h2 id="skills">Skills</h2>
+    <dl class="skills">
+      <div><dt>Web</dt><dd>React, TypeScript, FastAPI, Flask, PHP, REST APIs</dd></div>
+      <div><dt>Data</dt><dd>PostgreSQL, MySQL, SQLAlchemy, pandas, scikit-learn</dd></div>
+      <div><dt>Mobile</dt><dd>Flutter, Android Studio</dd></div>
+      <div><dt>IoT &amp; embedded</dt><dd>C/C++, Arduino, ESP32, LoRa, sensors, Node-RED</dd></div>
+      <div><dt>Tools</dt><dd>Git, GitHub Actions, Docker, Vercel, Render, Linux</dd></div>
+      <div><dt>Languages</dt><dd>English (fluent), Burmese (native), Thai (basic)</dd></div>
+    </dl>
+  </section>
+
+  <footer>Pyae Phyo Han · Bangkok, Thailand</footer>
+</main>
+</body>
+</html>
